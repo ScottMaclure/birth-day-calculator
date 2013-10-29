@@ -1,0 +1,15 @@
+<div ng-controller="InfoCtl" ng-hide="data.info.futureBirthDates.length === 0">
+
+	<pre>Selected date is: <em>{{data.dt | date:'fullDate' }}</em></pre>
+	<!-- <pre>{{ data.info | json }}</pre> -->
+
+	<h3><span ng-bind="data.options.numberOfDaysToCalculate">XXX</span> Future birthdays</h3>
+
+	<ol class="bdc-futureBirthDates">
+		<li ng-repeat="futureBirthDate in data.info.futureBirthDates">
+			<span class="bdc-futureBirthDates__day" ng-bind="futureBirthDate | date:'EEEE'">EEEE</span>
+			<span class="bdc-futureBirthDates__year" ng-bind="futureBirthDate | date:'yyyy'">yyyy</span>
+		</li>
+	</ol>
+
+</div>

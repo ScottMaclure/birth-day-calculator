@@ -1,0 +1,20 @@
+<div ng-controller="DatepickerCtrl">
+
+	<pre>Selected date is: <em>{{data.dt | date:'fullDate' }}</em></pre>
+
+	<div class="form-horizontal">
+		
+		<input type="text" 
+			datepicker-popup="dd-MMMM-yyyy" 
+			datepicker-options="dateOptions" 
+			ng-model="data.dt" 
+			ng-required="true" 
+			is-open="opened"
+		/>
+		
+		<button class="btn" ng-click="open()"><span class="glyphicon glyphicon-calendar"></span></button>
+		<button class="btn btn-small btn-danger" ng-click="clear()">Clear</button>
+
+	</div>
+
+</div>
